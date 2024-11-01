@@ -1,0 +1,134 @@
+:root{
+    --backdrop-blur:blur(10px);
+    --trans-color:rgba(255, 255, 255, 0.2);
+    --trans-bg:rgba(255, 255, 255, 0.1);
+    --dark-trans-bg:rgba(0, 0, 0, 0.03);
+    --primary-color:#D32F2F;
+    --secondary-color:#2979FF;
+    --accent-color:#FF9800;
+    --bg-color:#bdbdbd30;
+    --highlight-color:#C6FF00;
+    --light-color:#ffff;
+    --dark-text:#000;
+    --grey-text:#B0B0B0;
+    --sm-font:15px;
+    --md-font:calc(var(--sm-font) * 2);
+    --lg-font:calc(var(--sm-font) * 3);
+    --xlg-font:calc(var(--sm-font) * 4);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .3s ease;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: var(--bg-color);
+}
+section{
+    font-family: Raleway;
+    margin-block: 50px;
+    padding-block: 50px;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background: var(--light-color);
+}
+section .animate{
+    opacity: 0;
+    transition: 1s;
+    filter: blur(5px);
+}
+section.show-animate .animate{
+    opacity: 1;
+    filter: blur(0);
+}
+.sect-name, .sect-desc{
+    text-align: center;
+}
+.sect-name{
+    color: var(--dark-text);
+    font-size: var(--lg-font);
+}
+.sect-desc{
+    color: var(--accent-color);
+    font-size: var(--md-font);
+}
+.raleway{
+    font-family: Raleway;
+}
+.lato{
+    font-family: Lato;
+}
+.ghost{
+    width: 100%;
+    min-height: inherit;
+    background: linear-gradient(to bottom, rgba(0,0,0,.6),rgba(0,0,0,.1),rgba(0,0,0,.7));
+}
+.wrapper{
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.a-card{
+    cursor: pointer;
+    transition: .2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.a-card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+button{
+    padding: 10px 20px;
+    border-radius: .07cm;
+    font-size: var(--sm-font);
+    border: none;
+    cursor: pointer;
+}
+button:hover{}
+
+/* Headers Raleway*/
+@font-face {
+    font-family: 'Raleway';
+    src: url(../fonts/Raleway-VariableFont_wght.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Paragraphs Lato*/
+@font-face {
+    font-family: 'Lato';
+    src: url(../fonts/Lato-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* WebKit-based browsers (Chrome, Edge, Safari) */
+html::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */
+}
+html::-webkit-scrollbar-track {
+    background-color: #1a1a1a; /* Track color */
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #444; /* Thumb color */
+    border-radius: 6px; /* Rounded corners */
+}
+html::-webkit-scrollbar-thumb:hover {
+    background-color: #666; /* Thumb color on hover */
+}
+/* Firefox scrollbar customization */
+html {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #444 #1a1a1a; /* Thumb color and track color */
+}

@@ -1,0 +1,9 @@
+.hidden {
+    opacity: 0;
+}
+.about .animate{
+    transform: translateX(100%);
+}
+.about.show-animate .animate{
+    transform: translateX(0%);
+}

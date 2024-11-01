@@ -1,0 +1,92 @@
+.home{
+    color: var(--light-color);
+    min-height: 100vh;
+    margin-block: 0;
+    padding: 0;
+    background:url(../assets/london_bridge.jpg) center/cover fixed;
+
+    & .ghost{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, rgba(0,0,0,.6),rgba(0,0,0,.3),rgba(0,0,0,.1));
+        & .wrapper{
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            border: none;
+
+            & 
+            .text-wrap{
+                display: flex;
+                gap: 5px;
+                flex-direction: column;
+
+                & 
+                h1, h2{
+                    color: var(--light-color);
+                    text-align: center;
+                } 
+                h1{
+                    font-size: var(--xlg-font);
+                    color: var(--light-color);
+                    & span{
+                        color: var(--primary-color);
+                    }
+                } 
+                h2{
+                    color: var(--light-color);
+                    font-size: var(--md-font);
+                }
+            }
+            .btn-wrap{
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+            .card-wrap{
+                margin-bottom: 50px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 20px;
+
+                & .card{
+                    border-radius: .1cm;
+                    width: 250px;
+                    padding: 20px 0;
+                    border: 3px solid var(--trans-color);
+                    background: var(--trans-bg);
+                    backdrop-filter: var(--backdrop-blur);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    & 
+                    .txt-content{
+                        color: var(--light-color);
+                    }
+                    .svg{
+                        height: 70px;
+                        width: 70px;
+                        padding: 10px;
+
+                        & svg{
+                            height: 100%;
+                            width: 100%;
+                            color: var(--highlight-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

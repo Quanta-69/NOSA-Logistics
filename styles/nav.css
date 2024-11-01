@@ -1,0 +1,92 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    z-index: 100;
+    transition: .3s ease;
+  }
+  .header.scrolled{
+    background: black;
+    color: black;
+  }
+  .logo {
+    padding: 10px 15px;
+    width: 40px;
+    height: 40px;
+    color: var(--light-color);
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .navbar a {
+    position: relative;
+    color: var(--light-color);
+    font-size:calc( var(--sm-font) + 4px);
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 35px;
+    transition: 0.3s;
+  }
+  .navbar a:hover {
+    color: var(--primary-color);
+  }
+  .nav-link.active {
+    color: var(--primary-color);
+  }
+  
+  #menu-icon {
+    font-size: 36px;
+    color: var(--light-color);
+    display: none;
+  }
+  /* BREAKPOINTS */
+  @media (max-width: 992px) {
+    .header {
+      padding: 1.25rem 4%;
+    }
+  }
+  @media (max-width: 768px) {
+    #menu-icon {
+      display: block;
+    }
+    .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 0.5rem 4%;
+      display: none;
+    }
+    .navbar.active {
+      display: block;
+    }
+    .navbar a {
+      text-align: center;
+      display: block;
+      margin: 1.5rem 0;
+    }
+    .nav-bg {
+      position: fixed;
+      top: 79px;
+      left: 0;
+      width: 100%;
+      height: 295px;
+      background:var(--dark-trans-bg);
+      border-bottom: 2px solid var(--grey-text);
+      z-index: 99;
+      display: none;
+    }
+    .nav-bg.active {
+      display: block;
+    }
+  }
