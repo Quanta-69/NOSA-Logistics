@@ -55,6 +55,11 @@ footer{
     font-size: calc(var(--md-font) - 8px);
     color: var(--grey-text);
     margin-block-start: 50px;
+    text-align: center;
+
+    & p{
+        text-align: center;
+    }
 }
 footer > *{
     color: white !important;
