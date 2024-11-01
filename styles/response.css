@@ -6,6 +6,9 @@
 /* Small devices (phones, landscape, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     /* Your CSS code for small devices */
+    :root{
+        --sm-font:10px;
+    }
     .home{
         padding-block-start: 50px;
     }
